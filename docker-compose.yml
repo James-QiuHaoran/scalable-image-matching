@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+
+  image-match:
+    build: 
+      context: .
+    image: ascribe/image-match
+    container_name: image-match
+    volumes:
+      - .:/usr/src/app/
+    depends_on:
+     - "elasticsearch"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.2.2
+    container_name: elasticsearch
+    environment:
+      - xpack.security.enabled=false
+      - xpack.monitoring.enabled=false
+      - http.host=0.0.0.0
+      - transport.host=127.0.0.1
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+
+  bdocs:
+    build: 
+      context: .
+    image: ascribe/image-match
+    container_name: bdocs
+    volumes:
+      - .:/usr/src/app/
+    working_dir: /usr/src/app/docs
+    command: make html
+    
+  vdocs:
+    image: nginx:alpine
+    ports:
+      - '40080:80'
+    volumes:
+      - ./docs/build/html:/usr/share/nginx/html
