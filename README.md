@@ -10,3 +10,10 @@ Online search and local search are both supported, i.e. provide URL or local add
 - Install with pip: `pip install numpy scipy .`;
 - Install `Elasticsearch`, https://www.elastic.co/downloads/elasticsearch;
 - Make sure elasticsearch is running before scalable searching is used;
+
+## Useful Links
+
+Once you're up and running, read these two (short) sections of the documentation to get a feel for what scalable-image-match is capable of:
+
+### [Image signatures](http://image-match.readthedocs.io/en/latest/signatures.html)
+### [Storing and searching images](http://image-match.readthedocs.io/en/latest/searches.html)
