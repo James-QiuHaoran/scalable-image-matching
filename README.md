@@ -1,8 +1,8 @@
 # scalable-image-matching
 
-This is a image matching system(library) for scalable and efficient matching of images from a large database. The basic idea is to compute perceptural hash value for each image and compare the similarity based on the pHash computed. Searching are scalable with the elasticsearch as the backend database.
+This is a image matching system (library) for scalable and efficient matching of images from a large database. The basic idea is to compute perceptural hash value for each image and compare the similarity based on the `pHash` computed. Searching are scalable by using elasticsearch as the backend database.
 
-Online search and local search are both supported, i.e. provide URL or local address of the target image to the library.
+Online search and local search are both supported, i.e. providing the URL or the local address of the target image to the library.
 
 ## Get Started
 
@@ -13,7 +13,7 @@ Online search and local search are both supported, i.e. provide URL or local add
 
 ## Useful Links
 
-Once you're up and running, read these two (short) sections of the documentation to get a feel for what scalable-image-match is capable of:
+Once you're up and running, read these two (short) sections of the documentation to get a feeling of what scalable-image-match is capable of:
 
-### [Image signatures](http://image-match.readthedocs.io/en/latest/signatures.html)
-### [Storing and searching images](http://image-match.readthedocs.io/en/latest/searches.html)
+- [Image signatures](http://image-match.readthedocs.io/en/latest/signatures.html)
+- [Storing and searching images](http://image-match.readthedocs.io/en/latest/searches.html)
